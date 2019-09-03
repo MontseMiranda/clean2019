@@ -1,0 +1,14 @@
+name: "my-website"
+navbar:
+  title: "CE Events"
+  left:
+    - text: "Quotation"
+      href: index.html
+    - text: "Contract"
+      href: contract.html
+    - text: "Credentials"
+      href: about.html
+    
+  
+
+   

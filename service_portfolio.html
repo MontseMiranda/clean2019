@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <style>
+   * {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 250;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+ul .inner.show {
+  /*display: block;*/
+}
+ul li {
+  margin: 0.5em 0;
+}
+ul li a.toggle {
+  width: 70%;
+  display: block;
+  background: rgb(0,191,255);
+  color: #fefefe;
+  padding: 0.50em;
+  border-radius: 0.15em;
+  transition: background 0.3s ease;
+}
+ul li a.toggle:hover {
+  background: rgb(30,144,255);
+}
+
+  </style>
+</head>
+<body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<ul class="accordion">
+  <li>
+    <a class="toggle" href="javascript:void(0);"><center>Logistics / Transportation</center></a>
+    <ul class="inner">
+      <li>Bus transfers</li>
+      <li>Chauffeur driven cars and minivan transfers</li>
+      <li>Meet and greet / dispatchers</li>
+      <li>
+        <a href="#" class="toggle"><center>Extra Services</center></a>
+        <div class="inner">
+          <ul>
+            <li>Water/Soft drinks loaded on board the transfers</li>
+            <li>Assistance on board the transfers</li>
+            <li>Hospitality / branding inside the terminal</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="toggle"><center>Group flight bookings</center></a>
+        <div class="inner">
+          <ul>
+            <li>Corporate group bookings</li>
+            <li>Chartered flights</li>
+            <li>Business Travel</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="toggle"><center>Less Frequent Services</center></a>
+        <div class="inner">
+          <ul>
+            <li>Luxury buses/cars</li>
+            <li>Vehicle branding</li>
+            <li>Welcome drink on board transfers</li>
+            <li>Limousine rentals</li>
+            <li>Disco bus</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
+  
+  <li>
+    <a class="toggle" href="javascript:void(0);"><center>Venue finding</center></a>
+    <ul class="inner">
+      <li>Hotel / Venue finding - best fit to our client requirements</li>
+      <li>Contract negotiation / rooming list management</li>
+      <li>Private check in</li>
+      <li>Meeting space set up and Audio Visuals assessment</li>
+      <li>Staffing: Hospitality staffing, Brand ambassadors, Mike runners </li>
+    </ul>
+  <li>
+    <a class="toggle" href="javascript:void(0);"><center>Events Production</center></a>
+    <ul class="inner">
+      <li>Staging</li>
+      <li>
+        <a href="#" class="toggle"><center>Audio Visual production</center></a>
+        <div class="inner">
+          <ul>
+            <li>Multimedia</li>
+            <li>Broadcast</li>
+            <li>Video production</li>
+            <li>Conference calls</li>
+            <li>Posters </li>
+            <li>Banners</li>
+            <li>
+        <a href="#" class="toggle"><center>Less Frequent Services</center></a>
+        <div class="inner">
+          <ul>
+            <li>Furniture for conferences: Lounges, bar stooks, counters, shelves ,...</li>
+            <li>Security</li>
+          </ul>
+        </div>
+      </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="toggle"><center>Entertainment</center></a>
+        <div class="inner">
+          <ul>
+            <li>Masters of Ceremony, Guest speakers</li>
+            <li>Artists</li>
+            <li>Ice-breakers</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <li>
+    <a class="toggle" href="javascript:void(0);"><center>Incentives</center></a>
+    <ul class="inner">
+      <li>Tours and Activities</li>
+      <li>Team Buildings and Workshops</li>
+      <li>Sailing Experiences</li>
+      <li>Gourmet food tours</li>
+      <li>Beach / Mountain / City Games</li>
+      <li>
+        <a href="#" class="toggle"><center>Premium Services</center></a>
+        <div class="inner">
+          <ul>
+            <li>VIP hospitality at sporting events</li>
+            <li>Helicopter flights</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="toggle"><center>Less Frequent Services</center></a>
+        <div class="inner">
+          <ul>
+            <li>Marketing stunts</li>
+            <li>Snow Events</li>
+            <li>CSR Corporate experiences</li>
+            <li>Cultural tours</li>
+            <li>Special interest tours</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <li>
+      <a class="toggle" href="javascript:void(0);"><center>Individual / small group attendance to Congresses</center></a>
+      <ul class="inner">
+        <li>Venue and Restaurant finding / Overall logistics planning</li>
+        <li>Transportation to/from Airport / Congress venue / Restaurants</li>
+        <li>Corporate Concierge services</li>
+        <li>Restaurant Vouchers / Menu prints / Assistance at Restaurants, etc...</li>
+        <li>Rental of appartments for corporate clients for short term relocations </li>
+      </ul>
+    </li>
+  </li>
+  <li>
+    <a class="toggle" href="javascript:void(0);"><center>Conference & Events Digital management</center></a>
+    <ul class="inner">
+      <li>Delegate registration</li>
+      <li>Event web design</li>
+      <li>Scanning</li>
+      <li>Conference App design and on-site management</li>
+      <li>
+        <a href="#" class="toggle"><center>Slide presentations design</center></a>
+        <div class="inner">
+          <ul>
+            <li>Powerpoint presentations</li>
+            <li>Interactive graphics</li>
+            <li>Dynamic data tables</li>
+            <li>Editing and formatting of Abstracts</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="toggle"><center>Business Analytics</center></a>
+        <div class="inner">
+          <ul>
+            <li>Statistics of attendance</li>
+            <li>Most visualized content</li>
+            <li>Data Visualization</li>
+            <li>Dashboards</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <li>
+      
+
+<script type="text/javascript">
+$('.toggle').click(function(e) {
+    e.preventDefault();
+  
+    var $this = $(this);
+  
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+    } else {
+        $this.parent().parent().find('li .inner').removeClass('show');
+        $this.parent().parent().find('li .inner').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+    }
+});
+</script>
+</body>
+</html>

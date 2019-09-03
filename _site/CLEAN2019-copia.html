@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Better Travel &amp; Events" />
+
+
+<title>CLEAN 2019</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/vis-4.16.1/vis.min.css" rel="stylesheet" />
+<script src="site_libs/vis-4.16.1/vis.min.js"></script>
+<link href="site_libs/timeline-0.4/timevis.css" rel="stylesheet" />
+<script src="site_libs/timevis-binding-0.5/timevis.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.1.17/leaflet-providers.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
+<link href="site_libs/leaflet-easybutton-1.3.1/easy-button.css" rel="stylesheet" />
+<script src="site_libs/leaflet-easybutton-1.3.1/easy-button.js"></script>
+<script src="site_libs/leaflet-easybutton-1.3.1/EasyButton-binding.js"></script>
+<link href="site_libs/ionicons-2.0.1/ionicons.min.css" rel="stylesheet" />
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.8/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.16/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.16/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.print.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="CLEAN2019.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CE Events</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Quotation</a>
+</li>
+<li>
+  <a href="contract.html">Contract</a>
+</li>
+<li>
+  <a href="about.html">Credentials</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">CLEAN 2019</h1>
+<h4 class="author">Better Travel &amp; Events</h4>
+<h4 class="date">From 17th to 21st November, 2019</h4>
+
+</div>
+
+
+<p><A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" align="right"></A></p>
+<div id="main-hotel-catalonia-plaza-catalunya" class="section level2">
+<h2><strong>Main Hotel: Catalonia Plaza Catalunya</strong></h2>
+<p>This magnificent hotel is located in the centre of Barcelona, a few metres from Plaza Catalunya and Las Ramblas. Built in 1899 by one of Gaudi’s masters, it is a beautiful modernist-style building. Currently the hotel is known as Catalonia Plaza Catalunya.</p>
+<p>The construction conserves the most significant elements of the period and the facade has recently been restored. In its interesting interior patio, you can take a relaxing swim in the pool or sunbathe and enjoy a refreshing cocktail. Furthermore, the hotel Catalonia Plaza Catalunya offers free Wi-Fi for its guests, fitness area and spa.</p>
+<p>The hotel is situated only a few metres from Plaza Catalunya and Las Ramblas. It is a modernist-style construction, built in 1899 by the famous architect Emilio Salas y Cortes (master of Gaudi). Fully restored and extended in 1998, it incorporated the adjoining classical-style building that was built in 1881. Currently the hotel is known as Catalonia Plaza Catalunya. The entrance and facade of the original building have been maintained and restored. An impressive marble staircase leads to the first floor, where there are magnificent doors made of Cuban mahogany (a type of wood that is no longer available), a perfectly conserved coffered ceiling and dome. Of the main staircase in the building, the wrought iron handrail has been maintained and the original designs have been restored. The hotel Catalonia Plaza Catalunya also has 4 function rooms, which are ideal for organising events and celebrations, captivating your guests, thanks to an unbeatable architectural setting in the urban and commercial centre of Barcelona. In the interior courtyard of the building, next to the hotel bar, there is a pool with a solarium and sunbeds at your entire disposal.</p>
+<p><img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/111/11198019.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/135/135892756.jpg" width="360" align="right"></p>
+<p><img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/989/98984445.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/183/18357104.jpg" width="360" align="right"></p>
+</div>
+<div id="alternative-hotels" class="section level2 tabset tabset-fade tabset-pills">
+<h2><strong>Alternative Hotels</strong></h2>
+<div id="hotel-ayre-caspe" class="section level3">
+<h3>Hotel Ayre Caspe</h3>
+<p>This design hotel is a 5-minute walk from Barcelona’s Arc de Triomf Metro Station and Estacio del Nord Bus Station. It has a gym, and offers free Wi-Fi and free bottled water. Rooms at the Ayre Hotel Caspe are air-conditioned and soundproofed. They feature satellite TV, a minibar and safe. The private bathroom comes with a hairdryer and amenities. The Ayre Caspe has an outdoor terrace, an attractive restaurant and a cafe-bar. Room service is also available. The hotel is a short walk from Gaudi’s buildings on Passeig de Gr??cia Boulevard. Plaza Catalunya is approximately 20 minutes’ walk away. There is a tour desk and 24-hour reception.</p>
+<p><img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/533/53365754.jpg" width="360"> <img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/138/138878231.jpg" width="360" align="right"></p>
+</div>
+<div id="el-avenida-palace-hotel" class="section level3">
+<h3>El Avenida Palace Hotel</h3>
+<p>El Avenida Palace Hotel is set on Barcelona’s Gran Via, 5 minutes’ walk from Plaza Catalunya, La Rambla and Paseo de Gracia. Its grand interior features an impressive staircase and marble columns. Many famous guests have stayed at the Hotel Avenida Palace, including the Beatles in 1965.</p>
+<p>The elegant air-conditioned rooms feature satellite TV and carpeted or parquet floors. Rooms are soundproofed and have a minibar, work desk and a safe. The hotel’s panoramic rooftop terrace offers views over the city, a sun deck and a swimming pool. There is also a lounge bar, a 24-hour front desk and both free WiFi and room service are available.</p>
+<p><img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/595/5950297.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/154/154600599.jpg" width="360" align="right"></p>
+<p><img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/922/92237185.jpg" width="360"> <img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/438/43898508.jpg" width="360" align="right"></p>
+</div>
+</div>
+<div id="programme-overview-and-timeline" class="section level2">
+<h2><strong>Programme Overview and timeline</strong></h2>
+<div id="htmlwidget-06f01877a5630d4d2c76" class="timevis html-widget" style="width:100%;height:672px;">
+<div class="btn-group zoom-menu">
+<button type="button" class="btn btn-default btn-lg zoom-in" title="Zoom in">+</button>
+<button type="button" class="btn btn-default btn-lg zoom-out" title="Zoom out">-</button>
+</div>
+</div>
+<script type="application/json" data-for="htmlwidget-06f01877a5630d4d2c76">{"x":{"items":[{"id":"1","start":"2019-11-18 11:50:00","content":"Transfer in","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"2","start":"2019-11-18 16:50:00","content":"Fam trip in the city","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"3","start":"2019-11-18 20:00:00","content":"Dinner Flamant","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"4","start":"2019-11-18 20:00:00","content":"Dinner Nuria","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"5","start":"2019-11-19 08:50:00","content":"Transfer Fira","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"6","start":"2019-11-19 18:50:00","content":"Transfer back Fira","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"7","start":"2019-11-20 08:50:00","content":"Transfer Fira","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"8","start":"2019-11-20 18:50:00","content":"Transfer back Fira","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"9","start":"2019-11-20 20:00:00","content":"Dinner Casa Carmen","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"10","start":"2019-11-20 20:00:00","content":"Dinner Brasseria Glop","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"11","start":"2019-11-21 08:50:00","content":"Transfer Fira","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"12","start":"2019-11-21 18:50:00","content":"Transfer back Fira","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"13","start":"2019-11-21 20:00:00","content":"Dinner Piscolabis","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"14","start":"2019-11-21 20:00:00","content":"Dinner Celler de tapas","group":"4","type":"box","style":"background-color:#FF9933;"}],"groups":[{"id":"1","content":"Morning"},{"id":"2","content":"Lunch"},{"id":"3","content":"Afternoon"},{"id":"4","content":"Diner"}],"showZoom":false,"zoomFactor":0.5,"fit":true,"options":[],"height":null,"api":[{"method":"setOptions","options":{"orientation":"top","align":"left"}}]},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="th-nov---restaurant-options" class="section level2 tabset tabset-fade tabset-pills">
+<h2><strong>18th Nov - Restaurant Options</strong></h2>
+<div id="restaurante-flamant" class="section level3">
+<h3>Restaurante Flamant</h3>
+<p>Flamant is a large restaurant with capacity for more than 200 people that presents a quite old-fashioned space with restored furniture and natural sunlight. Decorated like an old house and with different dining rooms, Flamant is a huge restaurant that offers excellent season cuisine with Mediterranean and international influences. Here they work carefully on the presentation of their dishes, which have more than reasonable prices.</p>
+<p><img src = "https://u.tfstatic.com/restaurant_photos/075/11075/169/612/da925310986ef3ca193155d4b6656fc4.jpg" width="392"> <img src = "https://media-cdn.tripadvisor.com/media/photo-s/05/1a/5c/01/flamant-restaurant.jpg" width="330" align="right"></p>
+</div>
+<div id="restaurante-cafeteria-nuria" class="section level3">
+<h3>Restaurante Cafeteria Nuria</h3>
+<p>La Rambla has always been the artery of the important events that happened in Barcelona. It has seen celebrating social, political and sporting victories. Couples walking in love: first with their carbines, then with their children and later with their grandchildren. It has experienced the pain of war or fire and has been the scene of large winter snowfalls and summer terraces and street music. And in this artery, since 1926, Nuria: heart of the life of a city in constant change. A place to meet and come cross. The proposed space for the dinner will be ???Salon Celler??? A 1920’s space, remodeled, decorated and illuminated in 2014 preserving the essence and materials of the last century, to integrate the comforts of it. On its walls the essence of wine making tradition is reflected so that diners can enjoy an environment full of magic in the heart of the city without having to travel to feel at middle of a vineyard.</p>
+<p><img src = "https://media-cdn.tripadvisor.com/media/photo-s/0c/53/56/84/salon-dia.jpg" width="390"> <img src = "https://www.webarcelona.net/sites/default/files/styles/events/public/guide/nuriagra.jpg?itok=jOj1MefF" width="330" align="right"></p>
+</div>
+</div>
+<div id="th-nov---restaurant-options-1" class="section level2 tabset tabset-fade tabset-pills">
+<h2><strong>20th Nov - Restaurant Options</strong></h2>
+<div id="restaurante-casa-carmen" class="section level3">
+<h3>Restaurante Casa Carmen</h3>
+<p>Casa Carmen is a young, dynamic and continuously growing restaurant group that already has establishments in Madrid, Seville and Barcelona. After the success of the restaurants located in Gran Via 2 and Diagonal Mar shopping centers, Casa Carmen arrives in 2017 at the emblematic Passeig de Gr??cia with a very attractive proposal: a Mediterranean menu with both traditional and innovative dishes at affordable prices. In addition, it also has an interesting selection of tapas and dishes perfect to share. The restaurant, very cozy, is divided into two floors and has different spaces.</p>
+<p><img src = "https://casacarmenrestaurant.com/wp-content/uploads/2018/11/DSC5295.jpg" width="330"> <img src = "https://www.didibenamifansite.com/wp-content/uploads/2018/08/restaurante-en-paseo-de-gracia-restaurante-casa-carmen-casa-carmen-calle-caspe.jpg" width="380" align="right"></p>
+</div>
+<div id="braseria-el-glop" class="section level3">
+<h3>Braseria El Glop</h3>
+<p>El Glop was inaugurated in 1997 and is known by locals as ???Theatre tavern???. It is very popular among groups, who come here to enjoy Catalan food in a rustic and informal atmosphere at good prices. It has a private room up to 80 people where the group will enjoy with a cozy atmosphere.</p>
+<p><img src = "http://elglop.com/wp-content/uploads/sites/36/2015/10/caspe2.jpg" width="360"> <img src = "http://restauraweb.com/elglop/wp-content/uploads/sites/36/2015/10/caspe8.jpg" width="360" align="right"></p>
+</div>
+</div>
+<div id="st-nov---restaurant-options" class="section level2 tabset tabset-fade tabset-pills">
+<h2><strong>21st Nov - Restaurant Options</strong></h2>
+<div id="restaurante-piscolabis-rambla" class="section level3">
+<h3>Restaurante Piscolabis Rambla</h3>
+<p>Piscolabis presents an innovative an original concept of tapas bar in the city of Barcelona. It’s a huge space boasting a design that combines old elements with a completely avant-garde touch. Vintage lamps hanging from the ceiling and old sofas coexist in perfect harmony with an elegant, modern atmosphere where red, black and white are the predominant colors. Tapas are prepared in front of the guests with seasonal products that are combined in order to create more than 65 modern dishes. The dessert list is also rally tempting.</p>
+<p><img src = "http://www.piscolabisrestaurant.es/uploads/FotoGaleria/300/1272x723_3667f6a0c97490758d7dc9659d01ea34136057489265.jpg" width="360"> <img src = "https://cdn.restaurantes.com/static/img/restaurants/852/852/852_2208.gl.jpg" width="360" align="right"></p>
+</div>
+<div id="celler-de-tapes-universitat" class="section level3">
+<h3>Celler de Tapes Universitat</h3>
+<p>It was a few years years ago when this restaurant located in the center of the university life in Barcelona opened its doors in order to present a new offer in the ‘tapas’ sector. In this place, which is now widely recognized, we can still enjoy succulent ‘tapas’ made with season products. Some of the best ‘tapas’ in the menu are: season mushrooms sauteed with virgin olive oil and maldon salt, grilled fresh duck foie with spice bread and mango coulis or their Joselito ham D.O. Guijuelo. It is a warm restaurant where we will enjoy high quality creative tapas cooked with mainly Mediterranean products</p>
+<p><img src = "https://u.tfstatic.com/restaurant_photos/223/316223/169/612/celler-de-tapas-universitat-celler-de-tapas-universitat-1-4afc6.jpg" width="360"> <img src = "https://media-cdn.tripadvisor.com/media/photo-s/04/ae/50/a8/celler-de-tapas.jpg" width="360" align="right"></p>
+</div>
+</div>
+<div id="map" class="section level2">
+<h2><strong>Map</strong></h2>
+<div id="htmlwidget-d4cfbc23cf424dfef66f" style="width:768px;height:672px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d4cfbc23cf424dfef66f">{"x":{"options":{"minZoom":14,"maxZoom":18,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"dragging":true},"calls":[{"method":"addProviderTiles","args":["Esri",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[41.3865706,41.396047,41.389117,41.3852487,41.389337,41.3894888,41.3884575,41.3890045,41.3853921],[2.16833789999998,2.179359,2.167199,2.16985479999994,2.17026340000007,2.17059219999999,2.16134009999996,2.16580450000004,2.16442269999993],5,null,null,{"interactive":true,"className":"","stroke":true,"color":["#FF0000","#FF0000","#FF0000","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FF0000","#FF0000","#FF0000","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF"],"fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPopups","args":[[41.3865706,41.396047,41.389117,41.3852487,41.389337,41.3894888,41.3884575,41.3890045,41.3853921],[2.16833789999998,2.179359,2.167199,2.16985479999994,2.17026340000007,2.17059219999999,2.16134009999996,2.16580450000004,2.16442269999993],["<b>Hotel Catalonia Plaza Catalunya<\/b>","<b>Hotel Ayre Caspe<\/b>","<b>Hotel Avenida Palace<\/b>","<b>Nuria<\/b>","<b>Casa Carmen<\/b>","<b>Brasseria Glop<\/b>","<b>Flamant<\/b>","<b>Piscolabis<\/b>","<b>Celler de Tapas<\/b>"],null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""}]},{"method":"addLegend","args":[{"colors":["#FF0000","#0000FF"],"labels":["Accom","Rest"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"factor","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addEasyButton","args":[{"icon":"ion-arrow-shrink","title":"Reset View","onClick":"function(btn, map){ map.setView(map._initialCenter, map._initialZoom); }","position":"topleft"}]}],"limits":{"lat":[41.3852487,41.396047],"lng":[2.16134009999996,2.179359]}},"evals":["calls.4.args.0.onClick"],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (function(el, x){ var map = this; map._initialCenter = map.getCenter(); map._initialZoom = map.getZoom();}).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="budget" class="section level2">
+<h2><strong>Budget</strong></h2>
+<div id="htmlwidget-b4eac8dc78fc7d739a55" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b4eac8dc78fc7d739a55">{"x":{"filter":"none","extensions":["Buttons"],"data":[["2019-11-17","2019-11-17","2019-11-18","2019-11-18","2019-11-18","2019-11-18","2019-11-18","2019-11-18","2019-11-18","2019-11-19","2019-11-19","2019-11-19","2019-11-19","2019-11-20","2019-11-20","2019-11-20","2019-11-20","2019-11-20","2019-11-20","2019-11-21","2019-11-21","2019-11-21","2019-11-21","2019-11-21","2019-11-21",null,null],["Accom","Accom","Accom","Accom","Trnsf","Trnsf","Rest","Rest","Rest","Accom","Accom","Trnsf","Trnsf","Accom","Accom","Trnsf","Trnsf","Rest","Rest","Accom","Accom","Trnsf","Trnsf","Rest","Rest","Accom","Accom"],["Catalonia Plaça Catalunya","Catalonia Plaça Catalunya","Catalonia Plaça Catalunya","Catalonia Plaça Catalunya","Izaro","Izaro","Flamant","Nuria","Nuria","Catalonia Plaça Catalunya","Catalonia Plaça Catalunya","Izaro","Izaro","Catalonia Plaça Catalunya","Catalonia Plaça Catalunya","Izaro","Izaro","Casa Carmen","Brasseria Glop","Catalonia Plaça Catalunya","Catalonia Plaça Catalunya","Izaro","Izaro","Piscolabis","Celler de tapas","Alternative  hotel: Ayre Caspe","Alternative  hotel: El Avenida palace"],[5,5,70,70,2,1,70,null,null,70,70,1,1,70,70,1,1,70,null,15,15,1,1,15,null,null,null],["DUIs, b.breakfast included","city tax","DUIs, b.breakfast included","city tax","50-Seater bus transfer in","50-Seater bus Fam trip","Dinner at Flamant - 3 courses menu- 1/2 bottle of wine per person","Dinner at Nuria  - 3 courses menu- 1/2 bottle of wine per person","Dinner at Nuria  - Tapas  menu- 1/2 bottle of wine per person","DUIs, b.breakfast included","city tax","70-Seater bus transfer fira in","70-Seater bus transfer fira out","DUIs, b.breakfast included","city tax","70-Seater bus transfer fira in","70-Seater bus transfer fira out","Dinner at  Casa Carmen - 3 courses menu- 1/2 bottle of wine per person","Dinner at  Brasseria Glop - 3 courses grill meat menu- 1/2 bottle of wine per person","DUIs, b.breakfast included","city tax","70-Seater bus transfer fira in","70-Seater bus transfer fira out","Dinner at Tapas dinner- 1/2 bottle of wine per person","Dinner at Tapas dinner- 1/2 bottle of wine per person","Double room per single use breakfast included (rate per room and night)","Double room per single use breakfast included (rate per room and night)"],[125,1.31,125,1.31,261,240,43,32,30,200,1.31,327,327,200,1.31,327,327,54,37,200,1.31,327,327,36,47,118,145],[625,6.55,8750,91.7,522,240,3010,0,0,14000,91.7,327,327,14000,91.7,327,327,3780,0,3000,19.65,327,327,540,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>DATE<\/th>\n      <th>CAT<\/th>\n      <th>Owner<\/th>\n      <th>Quantity<\/th>\n      <th>Concept<\/th>\n      <th>withVAT<\/th>\n      <th>Total<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"\n    function(settings, json) {\n      $(this.api().table().header()).css({\n        'background-color': '#ee7600 ',\n        'color': '#fff'\n      });\n    }","dom":"Bfrtip","buttons":["copy","print"],"pageLength":27,"paging":false,"autoWidth":false,"columnDefs":[{"className":"dt-right","targets":[3,5,6]}],"order":[],"orderClasses":false,"lengthMenu":[10,25,27,50,100],"rowCallback":"function(row, data) {\nDTWidget.formatDate(this, row, data, 0, \"toDateString\");\nDTWidget.formatCurrency(this, row, data, 5, \"€\", 2, 3, \",\", \".\", true);\nDTWidget.formatCurrency(this, row, data, 6, \"€\", 2, 3, \",\", \".\", true);\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="terms-conditions" class="section level3">
+<h3>Terms &amp; Conditions</h3>
+<p>*Rates valid for 2019.</p>
+<p>*Rates including a 10% commission for Better Travel &amp; Events before taxes</p>
+<p>*Cutting Edge Events management fee including in the detailed rates</p>
+<p>*VAT included.</p>
+<p>*No reservation has been done. Availability upon request.</p>
+</div>
+</div>
+<div id="company-profile" class="section level2">
+<h2><strong>Company Profile</strong></h2>
+<p><img src = "CURRICULUM%20GRAFICO.001.jpeg"></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

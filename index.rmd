@@ -1,0 +1,218 @@
+---
+title: "CLEAN 2019"
+author: "Better Travel & Events"
+date: 'From 17th to 21st November, 2019 '
+output:
+  html_document:
+    css: FORMATO.css
+    fig_height: 7
+    fig_width: 8
+    highlight: textmate
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+---
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(readxl)
+library(shiny)
+library(dplyr)
+```
+
+<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" align="right"></A>
+
+## **Main Hotel: Catalonia Plaza Catalunya**
+
+This magnificent hotel is located in the centre of Barcelona, a few metres from Plaza Catalunya and Las Ramblas. Built in 1899 by one of Gaudi's masters, it is a beautiful modernist-style building. Currently the hotel is known as Catalonia Plaza Catalunya.
+
+The construction conserves the most significant elements of the period and the facade has recently been restored. In its interesting interior patio, you can take a relaxing swim in the pool or sunbathe and enjoy a refreshing cocktail. Furthermore, the hotel Catalonia Plaza Catalunya offers free Wi-Fi for its guests, fitness area and spa.
+
+The hotel is situated only a few metres from Plaza Catalunya and Las Ramblas. It is a modernist-style construction, built in 1899 by the famous architect Emilio Salas y Cortes (master of Gaudi). Fully restored and extended in 1998, it incorporated the adjoining classical-style building that was built in 1881. Currently the hotel is known as Catalonia Plaza Catalunya.
+The entrance and facade of the original building have been maintained and restored. An impressive marble staircase leads to the first floor, where there are magnificent doors made of Cuban mahogany (a type of wood that is no longer available), a perfectly conserved coffered ceiling and dome. Of the main staircase in the building, the wrought iron handrail has been maintained and the original designs have been restored.
+The hotel Catalonia Plaza Catalunya also has 4 function rooms, which are ideal for organising events and celebrations, captivating your guests, thanks to an unbeatable architectural setting in the urban and commercial centre of Barcelona. In the interior courtyard of the building, next to the hotel bar, there is a pool with a solarium and sunbeds at your entire disposal.
+
+<img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/111/11198019.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/135/135892756.jpg" width="360" align="right">
+
+<img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/989/98984445.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/183/18357104.jpg" width="360" align="right">
+
+## **Alternative Hotels** {.tabset .tabset-fade .tabset-pills}
+
+### Hotel Ayre Caspe
+
+This design hotel is a 5-minute walk from Barcelona's Arc de Triomf Metro Station and Estacio del Nord Bus Station. It has a gym, and offers free Wi-Fi and free bottled water.
+Rooms at the Ayre Hotel Caspe are air-conditioned and soundproofed. They feature satellite TV, a minibar and safe. The private bathroom comes with a hairdryer and amenities.
+The Ayre Caspe has an outdoor terrace, an attractive restaurant and a cafe-bar. Room service is also available.
+The hotel is a short walk from Gaudi's buildings on Passeig de Gr??cia Boulevard. Plaza Catalunya is approximately 20 minutes' walk away. There is a tour desk and 24-hour reception.
+
+<img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/533/53365754.jpg" width="360"> <img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/138/138878231.jpg" width="360" align="right">
+
+### El Avenida Palace Hotel
+
+El Avenida Palace Hotel is set on Barcelona's Gran Via, 5 minutes' walk from Plaza Catalunya, La Rambla and Paseo de Gracia. Its grand interior features an impressive staircase and marble columns. Many famous guests have stayed at the Hotel Avenida Palace, including the Beatles in 1965.
+
+The elegant air-conditioned rooms feature satellite TV and carpeted or parquet floors. Rooms are soundproofed and have a minibar, work desk and a safe. The hotel's panoramic rooftop terrace offers views over the city, a sun deck and a swimming pool. There is also a lounge bar, a 24-hour front desk and both free WiFi and room service are available. 
+
+
+<img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/595/5950297.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/154/154600599.jpg" width="360" align="right">
+
+
+<img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/922/92237185.jpg" width="360"> <img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/438/43898508.jpg" width="360" align="right">
+
+
+## **Programme Overview and timeline**
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(timevis)
+library(dplyr)
+library(readxl)
+
+
+
+timeline <- read_excel("timeline.xlsx", sheet = 1,
+    col_types = c("date", "text", "numeric", 
+        "numeric", "numeric", "text"))
+
+data <- data.frame( id = 1:length(timeline$start),
+                    start = as.POSIXlt(timeline$start),
+                    content = timeline$content,
+                    group = timeline$group,
+                    type = "box",
+                    style = "background-color:#FF9933;")
+
+groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+
+tl <- timevis(data, groups, showZoom = FALSE, zoomFactor = 0.5, fit = TRUE,width = "100%")
+
+tl %>% setOptions(list(orientation = "top", align = "left"))
+
+```
+
+## **18th Nov - Restaurant Options** {.tabset .tabset-fade .tabset-pills}
+
+### Restaurante Flamant
+
+Flamant is a large restaurant with capacity for more than 200 people that presents a quite old-fashioned space with restored furniture and natural sunlight.
+Decorated like an old house and with different dining rooms, Flamant is a huge restaurant that offers excellent season cuisine with Mediterranean and international influences. Here they work carefully on the presentation of their dishes, which have more than reasonable prices.
+
+<img src = "https://u.tfstatic.com/restaurant_photos/075/11075/169/612/da925310986ef3ca193155d4b6656fc4.jpg" width="392"> <img src = "https://media-cdn.tripadvisor.com/media/photo-s/05/1a/5c/01/flamant-restaurant.jpg" width="330" align="right">
+
+
+### Restaurante Cafeteria Nuria
+
+La Rambla has always been the artery of the important events that happened in Barcelona. It has seen celebrating social, political and sporting victories. Couples walking in love: first with their carbines, then with their children and later with their grandchildren. It has experienced the pain of war or fire and has been the scene of large winter snowfalls and summer terraces and street music.
+And in this artery, since 1926, Nuria: heart of the life of a city in constant change. A place to meet and come cross.
+The proposed space for the dinner will be ???Salon Celler??? A 1920's space, remodeled, decorated and illuminated in 2014 preserving the essence and materials of the last century, to integrate the comforts of it.
+On its walls the essence of wine making tradition is reflected so that diners can enjoy an environment full of magic in the heart of the city without having to travel to feel at middle of a vineyard.
+
+<img src = "https://media-cdn.tripadvisor.com/media/photo-s/0c/53/56/84/salon-dia.jpg" width="390"> <img src = "https://www.webarcelona.net/sites/default/files/styles/events/public/guide/nuriagra.jpg?itok=jOj1MefF" width="330" align="right">
+
+## **20th Nov - Restaurant Options** {.tabset .tabset-fade .tabset-pills}
+
+### Restaurante Casa Carmen
+
+Casa Carmen is a young, dynamic and continuously growing restaurant group that already has establishments in Madrid, Seville and Barcelona. After the success of the restaurants located in Gran Via 2 and Diagonal Mar shopping centers, Casa Carmen arrives in 2017 at the emblematic Passeig de Gr??cia with a very attractive proposal: a Mediterranean menu with both traditional and innovative dishes at affordable prices. In addition, it also has an interesting selection of tapas and dishes perfect to share. The restaurant, very cozy, is divided into two floors and has different spaces.
+
+<img src = "https://casacarmenrestaurant.com/wp-content/uploads/2018/11/DSC5295.jpg" width="330"> <img src = "https://www.didibenamifansite.com/wp-content/uploads/2018/08/restaurante-en-paseo-de-gracia-restaurante-casa-carmen-casa-carmen-calle-caspe.jpg" width="380" align="right">
+
+### Braseria El Glop
+
+El Glop  was inaugurated in 1997 and is known by locals as ???Theatre tavern???. It is very popular among groups, who come here to enjoy Catalan food in a rustic and informal atmosphere at good prices. It has a private room up to 80 people where the group will enjoy with a cozy atmosphere. 
+
+<img src = "http://elglop.com/wp-content/uploads/sites/36/2015/10/caspe2.jpg" width="360"> <img src = "http://restauraweb.com/elglop/wp-content/uploads/sites/36/2015/10/caspe8.jpg" width="360" align="right">
+
+
+## **21st Nov - Restaurant Options** {.tabset .tabset-fade .tabset-pills}
+
+### Restaurante Piscolabis Rambla
+
+Piscolabis presents an innovative an original concept of tapas bar in the city of Barcelona. It's a huge space boasting a design that combines old elements with a completely avant-garde touch. Vintage lamps hanging from the ceiling and old sofas coexist in perfect harmony with an elegant, modern atmosphere where red, black and white are the predominant colors. Tapas are prepared in front of the guests with seasonal products that are combined in order to create more than 65 modern dishes. The dessert list is also rally tempting.
+
+<img src = "http://www.piscolabisrestaurant.es/uploads/FotoGaleria/300/1272x723_3667f6a0c97490758d7dc9659d01ea34136057489265.jpg" width="360"> <img src = "https://cdn.restaurantes.com/static/img/restaurants/852/852/852_2208.gl.jpg" width="360" align="right">
+
+### Celler de Tapes Universitat
+
+It was a few years years ago when this restaurant located in the center of the university life in Barcelona opened its doors in order to present a new offer in the 'tapas' sector. In this place, which is now widely recognized, we can still enjoy succulent 'tapas' made with season products.
+Some of the best 'tapas' in the menu are: season mushrooms sauteed with virgin olive oil and maldon salt, grilled fresh duck foie with spice bread and mango coulis or their Joselito ham D.O. Guijuelo.
+It is a warm restaurant where we will enjoy high quality creative tapas cooked with mainly Mediterranean products
+
+<img src = "https://u.tfstatic.com/restaurant_photos/223/316223/169/612/celler-de-tapas-universitat-celler-de-tapas-universitat-1-4afc6.jpg" width="360"> <img src = "https://media-cdn.tripadvisor.com/media/photo-s/04/ae/50/a8/celler-de-tapas.jpg" width="360" align="right">
+
+## **Map**
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+library(leaflet)
+library(stringr)
+library(ggmap)
+library(readxl)
+library(dplyr)
+library(leaflet.extras)
+library(shiny)
+
+coordinates <- read_excel("timeline.xlsx", 
+    sheet = "Sheet3", col_types = c("text", 
+        "text", "numeric", "numeric", "text", 
+        "text"))
+
+coordinates$Category <- factor(coordinates$Category)
+
+m <- coordinates %>% 
+  leaflet(options = leafletOptions(dragging = TRUE,
+  minZoom = 14, maxZoom = 18)) %>% 
+  addProviderTiles("Esri") %>% 
+  setView(lng = 2.1687300, lat = 41.3863900, zoom = 14) 
+
+pal <- colorFactor(palette = c("red","blue"),
+      levels = coordinates$Category)
+
+m %>% clearBounds() %>% 
+  addCircleMarkers(radius = 5, color = ~pal(Category)) %>% 
+  addPopups(popup = paste0("<b>",coordinates$Location,"</b>")) %>% 
+  addLegend(position = "bottomright", pal = pal, 
+  values = coordinates$Category) %>% addResetMapButton()
+
+```
+
+## **Budget**
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+
+library(readxl)
+library(dplyr)
+library(knitr)
+library(DT)
+
+budget <- read_excel("timeline.xlsx", sheet = "Sheet2", 
+    col_types = c("date", "text", "text", 
+        "numeric", "text", "numeric", "numeric"))
+budget$DATE <- as.Date(budget$DATE)
+
+DT::datatable(budget, extensions = "Buttons",rownames = FALSE, options = list(initComplete = JS("
+    function(settings, json) {
+      $(this.api().table().header()).css({
+        'background-color': '#ee7600 ',
+        'color': '#fff'
+      });
+    }"),
+dom ='Bfrtip', buttons = c('copy','print'), pageLength = nrow(budget),paging = FALSE, autoWidth = FALSE)) %>% 
+   formatDate('DATE') %>% 
+  formatCurrency(6:7,'\U20AC')
+
+
+```
+
+### Terms & Conditions
+
+  *Rates valid for 2019.
+  
+  *Rates including a 10% commission for Better Travel & Events before taxes
+  
+  *Cutting Edge Events management fee including in the detailed rates
+  
+  *VAT included. 
+  
+  *No reservation has been done. Availability upon request.
+
+## **Company Profile**
+
+<img src = "CURRICULUM GRAFICO.001.jpeg">

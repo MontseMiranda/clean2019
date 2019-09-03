@@ -1,0 +1,60 @@
+
+#TOC { 
+      color: #ee7600;
+      border-color: blue;
+      font-size: 14px;
+      font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      margin: 0px;
+}
+
+body {
+      font-size: 14px;
+      color: black;
+      font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      line-height: 130%;
+  }
+  
+td { 
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+  color: #ee7600;
+  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+h2 { 
+    font-size: 28px;
+    color:black;
+    font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+h3 { 
+  font-size: 20px;
+  color: #ee7600;
+  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+
+h4 { 
+  font-size: 18px;
+  color: #ee7600;
+  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+
+h5 { 
+  font-size: 16px;
+  color: #ee7600;
+  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+
